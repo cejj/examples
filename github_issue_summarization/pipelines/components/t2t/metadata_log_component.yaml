@@ -40,11 +40,11 @@ implementation:
   container:
     image: gcr.io/google-samples/ml-pipeline-metadata-logger:v1
     args: [
-      --log-type, {inputFile: log_type},
-      --workspace-name, {inputFile: workspace_name},
-      --run-name, {inputFile: run_name},
-      --data-uri, {inputFile: data_uri},
-      --model-uri, {inputFile: model_uri}
+      --log-type, {InputPath: log_type},
+      --workspace-name, {InputPath: workspace_name},
+      --run-name, {InputPath: run_name},
+      --data-uri, {InputPath: data_uri},
+      --model-uri, {InputPath: model_uri}
     ]
     env:
       KFP_POD_NAME: "{{pod.name}}"
