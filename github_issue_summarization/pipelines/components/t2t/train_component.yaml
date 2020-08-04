@@ -49,11 +49,11 @@ implementation:
   container:
     image: gcr.io/google-samples/ml-pipeline-t2ttrain:v3ap
     args: [
-      --data-dir, {inputValue: data_dir},
-      --action, {inputValue: action},
-      --model-dir, {inputValue: model_dir},
-      --train-steps, {inputValue: train_steps},
-      --deploy-webapp, {inputValue: deploy_webapp},
+      --data-dir, {inputFile: data_dir},
+      --action, {inputFile: action},
+      --model-dir, {inputFile: model_dir},
+      --train-steps, {inputFile: train_steps},
+      --deploy-webapp, {inputFile: deploy_webapp},
       --train-output-path, {outputPath: train_output_path}
     ]
     env:
