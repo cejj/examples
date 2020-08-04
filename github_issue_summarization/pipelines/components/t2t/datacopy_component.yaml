@@ -40,10 +40,10 @@ implementation:
   container:
     image: gcr.io/google-samples/ml-pipeline-t2ttrain:v3ap
     args: [
-      --data-dir, {inputFile: data_dir},
-      --checkpoint-dir, {inputFile: checkpoint_dir},
-      --action, {inputFile: action},
-      --model-dir, {inputFile: model_dir},
+      --data-dir, {InputPath: data_dir},
+      --checkpoint-dir, {InputPath: checkpoint_dir},
+      --action, {InputPath: action},
+      --model-dir, {InputPath: model_dir},
       --copy-output-path, {outputPath: copy_output_path}
     ]
     env:
